@@ -1,5 +1,6 @@
 ﻿using DotnetConfDemo.Models;
 using Microsoft.EntityFrameworkCore;
+// ReSharper disable All
 
 namespace DotnetConfDemo.Data
 {
@@ -15,7 +16,9 @@ namespace DotnetConfDemo.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //this is just for demo purposes, never hardCode your connectionString
-            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Integrated Security=true;");
+            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DotnetConfDemo;Integrated Security=true;");
         }
+
+       
     }
 }
